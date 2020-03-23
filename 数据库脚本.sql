@@ -27,7 +27,19 @@ CREATE TABLE `oauth_token_key` (
 
 DROP TABLE IF EXISTS `logrecord`;
 CREATE TABLE `logrecord` (
-  `time` char(50) DEFAULT NULL,
-  `title` char(100) DEFAULT NULL,
-  `context` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+                             `time` char(50) DEFAULT NULL,
+                             `title` char(100) DEFAULT NULL,
+                             `context` text,
+                             `id` int(11) NOT NULL AUTO_INCREMENT,
+                             `user` char(50) NOT NULL,
+                             PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8
+
+DROP TABLE IF EXISTS `userinfo`;
+CREATE TABLE `userinfo` (
+                            `user` char(50) DEFAULT NULL,
+                            `passwords` char(50) DEFAULT NULL,
+                            `randm_code` char(50) DEFAULT NULL,
+                            `id` int(11) NOT NULL AUTO_INCREMENT,
+                            PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8

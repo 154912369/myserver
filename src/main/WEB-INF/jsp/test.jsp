@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script>
         token=$.cookie("token")
